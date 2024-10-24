@@ -2,15 +2,9 @@
 
 import Link from 'next/link'
 import React from 'react'
- export interface blog{
-  id:number,
-  title:string,
-  writer:string,
-  description:string,
-  image:string,
-}
+ 
 // blogs 
-   export const blogs:blog[]= [
+    const blogs = [
     {
       "id": 1,
       "title": "The Journey of Self-Discovery",
@@ -91,7 +85,7 @@ const BlogsPage = () => {
         <section className="text-myHead body-font">
   <div className="container px-5 py-24 mx-auto ">
     <div className="flex flex-wrap -m-4">
-      { blogs && blogs.map((blog:blog)=>
+      { blogs && blogs.map((blog )=>
       (
         <div key={blog.id} className="p-4 md:w-1/3">
         <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
