@@ -6,7 +6,7 @@ const Header = () => {
   return (
     <div>
         <header className="text-mytext body-font">
-  <div className="container bg-myHead  mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
+  <div className="container bg-gray-800  mx-auto flex flex-wrap p-5 flex-col md:flex-row items-center">
     <a className="flex title-font font-medium items-center text-mytext mb-4 md:mb-0">
       {/* <svg
         
