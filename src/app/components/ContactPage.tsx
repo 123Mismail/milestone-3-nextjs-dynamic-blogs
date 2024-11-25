@@ -3,7 +3,7 @@ import React from 'react'
 
 const ContactUs = () => {
   return (
-    <section className="text-myHead body-font relative">
+    <section id='contact' className="text-myHead body-font relative">
       <div className='text-4xl font-bold mx-auto w-full text-center pt-12 -mb-5'>Contact Us</div>
     <div className="container px-5 py-24 mx-auto flex sm:flex-nowrap flex-wrap">
       <div className="lg:w-2/3 md:w-1/2   rounded-lg overflow-hidden sm:mr-10 p-10 flex items-end justify-start relative">

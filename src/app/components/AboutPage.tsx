@@ -1,12 +1,14 @@
 
+
+
 import Image from 'next/image'
 import Link from 'next/link'
 import React from 'react'
 
 const AboutPage = () => {
   return (
-    <section className="text-gray-600 min-h-[97vh] h-full body-font overflow-hidden mb-16">
-   <h1 className='mx-auto flex justify-center items-center pt-4 text-3xl font-bold'>About us</h1>
+    <section id='about' className="text-gray-600 min-h-[97vh] h-full body-font overflow-hidden mb-16 mt-10">
+   <h1 className='mx-auto flex justify-center items-center pt-4 text-3xl font-bold text-black'>About us</h1>
    <p className='md:max-w-3xl max-w-2xl text-center mx-auto py-2'>Lorem ipsum, dolor sit amet consectetur adipisicing elit. Eligendi similique harum qui odio deleniti et odit quasi iusto, fugit quis quia? Pariatur labore ab inventore odio consequuntur ad obcaecati ea.</p>
     <div className="container px-5 py-24 mx-auto">
       
