@@ -10,16 +10,13 @@ import React from "react";
   author: string;
 }
 // blogs
- export  const blogs:IData[] = [
+ export  const blogs :IData[] = [
   {
     id: 1,
     title: "The Journey of Self-Discovery",
     author: "Jane Doe",
-    description: `This blog explores the profound journey of self-discovery that many people undergo in their lives, emphasizing the transformative impact of truly understanding oneself. In a fast-paced world, the importance of pausing to reflect on who we are, what we want, and where we’re heading is often overlooked. This blog delves into how acknowledging personal strengths and embracing perceived weaknesses can unlock hidden potential and foster resilience. Through relatable anecdotes and actionable advice, readers will learn to navigate their own paths of growth.
+    description:'This blog explores the profound journey of self-discovery that many people undergo in their lives, emphasizing the transformative impact of truly understanding oneself. In a fast-paced world, the importance of pausing to reflect on who we are, what we want, and where we’re heading is often overlooked. This blog delves into how acknowledging personal strengths and embracing perceived weaknesses can unlock hidden potential and foster resilience. Through relatable anecdotes and actionable advice, readers will learn to navigate their own paths of growth.',
 
-The blog discusses essential techniques for self-exploration, such as journaling, meditation, and mindfulness practices, which offer tools to quiet external noise and tune into inner wisdom. It also touches on the value of setting intentional goals, facing fears, and re-evaluating one’s life purpose. For those in search of deeper meaning, this blog will provide guidance on cultivating self-compassion and shedding limiting beliefs.
-
-Readers are encouraged to connect with themselves more fully, developing a greater sense of authenticity and purpose. By the end of this post, they will feel inspired to embrace their uniqueness, celebrate their progress, and continue on a path toward a more fulfilling and genuine life journey.`,
     image: "/self-discovery.avif",
   },
   {
@@ -111,7 +108,7 @@ const BlogsPage = () => {
         <div className="container px-5 py-24 mx-auto  ">
           <div className="flex flex-wrap -m-4 ">
             {blogs &&
-              blogs.map((blog) => (
+              blogs.map((blog , index) => (
                 <div key={blog.id} className="p-4 md:w-1/3 group ">
                   <div className="h-full border-2 border-gray-200 border-opacity-60 rounded-lg overflow-hidden">
                     <img
@@ -130,24 +127,35 @@ const BlogsPage = () => {
                         {blog.description}
                       </p>
                       <div className="flex items-center flex-wrap ">
-                        <Link
-                          href={`/blogs/${blog.id}`}
-                          className="  inline-flex items-center md:mb-2 lg:mb-0 text-indigo-600"
-                        >
-                          Learn More
-                          <svg
-                            className="w-4 h-4 ml-2"
-                            viewBox="0 0 24 24"
-                            stroke="currentColor"
-                            strokeWidth={2}
-                            fill="none"
-                            strokeLinecap="round"
-                            strokeLinejoin="round"
-                          >
-                            <path d="M5 12h14" />
-                            <path d="M12 5l7 7-7 7" />
-                          </svg>
-                        </Link>
+                         
+                          {index <=9 ?(
+                                 <Link
+
+                                 href={`/blogs/${blog.id}`}
+                                 className="  inline-flex items-center md:mb-2 lg:mb-0 text-indigo-600"
+                               >
+                                 Learn More
+                                 <svg
+                                   className="w-4 h-4 ml-2"
+                                   viewBox="0 0 24 24"
+                                   stroke="currentColor"
+                                   strokeWidth={2}
+                                   fill="none"
+                                   strokeLinecap="round"
+                                   strokeLinejoin="round"
+                                 >
+                                   <path d="M5 12h14" />
+                                   <path d="M12 5l7 7-7 7" />
+                                 </svg>
+                               </Link>
+                          ):(
+                            <div className="text-lg font-normal  text-red-300">
+                              description is not availabel
+                            </div>
+                          )
+                          
+                          }
+                       
                         <span className="text-gray-400 mr-3 inline-flex items-center lg:ml-auto md:ml-0 ml-auto leading-none text-sm pr-3 py-1 border-r-2 border-gray-200"></span>
 
                         <span className="text-gray-400 inline-flex items-center leading-none text-sm">

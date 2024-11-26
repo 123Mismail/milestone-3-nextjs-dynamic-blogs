@@ -1,8 +1,22 @@
  "use client"
 import React from 'react'
 import BlogsPage from "@/app/components/BlogsPage"
- 
-const blogs = [
+interface Description {
+  heading1: string;
+  paragraph1: string;
+  heading2?: string; // Optional, as not all objects may have these fields
+  paragraph2?: string;
+  heading3?: string;
+  paragraph3?: string;
+}
+interface BlogsPageProps {
+  id: number;
+  title: string;
+  writer: string;
+  description:Description[];
+  image: string;
+}
+const blogs:BlogsPageProps[] = [
   {
     id: 1,
     title: "The Journey of Self-Discovery",
